@@ -63,7 +63,7 @@ const Auth = () => {
           {isLensReady ? (
             <button
               disabled={authLoading || isLensReady}
-              className="bg-cyber-100 py-1 w-full h-full"
+              className="lenscon"
             >
               <Link href={`/profiles/${user.split("#")[0]}`}>
                 <a>🌿 {user || "Lens Ready"}</a>

@@ -85,7 +85,7 @@
 
   /* Hud */ 
   .top-hud { 
-    @apply xl:mx-96 fixed grid grid-cols-5 items-center top-0 left-0 right-0
+    @apply xl:mx-96 fixed grid grid-cols-4 items-center top-0 left-0 right-0
     rounded-b-lg
     font-exo
     text-white
@@ -96,12 +96,13 @@
   }
 
   .bottom-hud { 
-    @apply xl:mx-96 fixed grid grid-cols-3 items-center bottom-0 left-0 right-0
+    @apply xl:mx-96 fixed grid grid-cols-4 items-center bottom-0 left-0 right-0
     rounded-b-lg
     font-exo
     font-medium
     text-white
-    text-base
+    text-xs
+    xl:text-lg
     border-none
   }
 
@@ -110,8 +111,8 @@
     bg-glass-100 text-center
     rounded-b-lg
     border-none
-    hover:bg-cyber-100
-    hover:text-white
+    hover:bg-solar-100
+    hover:text-night-100
     cursor-pointer
     animate-pulse
   }
@@ -120,10 +121,17 @@
     @apply p-1 
     bg-cyber-100 text-center
     border-none
-    hover:bg-cyber-100
-    hover:text-white
+    hover:bg-solar-100
+    hover:text-night-100
     cursor-pointer
     rounded-br-lg
+  }
+
+  .lenscon {
+    @apply 
+    bg-glass-100 text-white
+    hover:bg-solar-100 hover:text-night-100
+    py-1 w-full h-full
   }
  
   .hud1 {
@@ -138,11 +146,10 @@
 
   .hud1con {
     @apply p-1 
-    bg-cyber-100 text-center
+    bg-glass-100 text-white
+    hover:bg-solar-100 hover:text-night-100
     rounded-bl-lg
     border-none
-    hover:bg-cyber-100
-    hover:text-white
     cursor-pointer
   }
 
@@ -156,8 +163,8 @@
     @apply p-1 
     bg-glass-100 text-center
     border-none
-    hover:bg-cyber-100
-    hover:text-white
+    hover:bg-solar-100
+    hover:text-night-100
     cursor-pointer
   }
   
@@ -165,26 +172,34 @@
     @apply p-1 
     bg-glass-100 text-center
     border-none
-    hover:bg-cyber-100
-    hover:text-white
+    hover:bg-solar-100
+    hover:text-night-100
     cursor-pointer
     rounded-br-lg
   }
 
   .huda {
     @apply p-1 
-    bg-glass-100 text-center
+    bg-glass-100 text-center text-white
+    hover:bg-solar-100 hover:text-night-100
     border-none
     rounded-tl-lg
   }
 
   .hudb {
     @apply p-1 
-    bg-glass-100 text-center
+    bg-glass-100 text-center text-white
+    hover:bg-solar-100 hover:text-night-100
     border-none
   }
 
   .hudc {
+    @apply p-1 
+    bg-glass-100 text-center text-white
+    border-none
+  }
+
+  .hudd {
     @apply p-1 
     bg-glass-100 text-center
     border-none
