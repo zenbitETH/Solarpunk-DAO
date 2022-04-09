@@ -1,4 +1,5 @@
 import Layout from "../components/Layout";
+import Dashboard from "./dashboard";
 import { useMoralis } from "react-moralis";
 import Link from "next/link";
 
@@ -7,12 +8,14 @@ const Home = () => {
 
   return (
     <Layout home={true}>
+      <Dashboard/>
       <div className="flex min-h-screen flex-col items-center justify-center">
+
         {/* <div className="mt-32">
           <Link href="/new-place">
             <a>NewPost</a>
           </Link>
-        </div> */}
+        </div> 
         <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
           <div className="grid grid-cols-2 mt-48">
           <img
@@ -61,7 +64,7 @@ const Home = () => {
             <Link href={"https://github.com/alessandromaci"}>alessandromaci</Link></div>
           </div>
           </div>
-        </main>
+        </main>*/}
       </div>
     </Layout>
   );

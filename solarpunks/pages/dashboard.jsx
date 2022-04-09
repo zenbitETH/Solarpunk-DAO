@@ -132,7 +132,7 @@ const Dashboard = () => {
   // End of Part 2
 
   return (
-    <Layout>
+    <Layout >
       <div className="MainCon">
         {!(account && isAuthenticated) && <ConnectWalletMessage />}
         {!(account && isAuthenticated && isLensReady) && (
