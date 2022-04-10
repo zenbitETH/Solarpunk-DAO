@@ -38,7 +38,7 @@ const Home = () => {
             </div>
           </div>
           </div>
-          <div className="h-screen mt-20 -pb-32">
+          <div className="h-screen mt-20 pb-64">
             <div className="text-6xl mx-10 text-solar-100 font-black hover:animate-pulse">How to join?</div>
             <div className="grid xl:grid-cols-3 gap-5 mt-20 text-white text-2xl font-exo">
               <a href={"https://punkcity.surge.sh"}>
@@ -62,7 +62,7 @@ const Home = () => {
                 <div className="text-[15rem] p-20 pt-40">🗳️</div>
               </div>
             </div>
-            <div className="text-6xl mt-20 mx-10 text-solar-100 font-black hover:animate-pulse">Built with:</div>
+            <div className="text-6xl mt-20 mx-10 text-white font-black hover:animate-pulse">Built with:</div>
             <div className="grid grid-cols-5 gap-5 mt-20 text-white text-2xl font-exo">
             <a href="https://testnets.opensea.io/collection/punk-cities" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">1. Punk Cities rewards</a>
               <a href="https://testnets.opensea.io/collection/punk-cities" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">2. Punk Cities collection</a>
@@ -70,36 +70,22 @@ const Home = () => {
               <a href="https://github.com/rtang03/solarpunks" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">4. Lens API w/Solarpunks</a>
               <a href="https://ipfs.io/" className="bg-glass-100  hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">5. IPFS w/NFT Storage</a>
             </div>
-            {/*
-            <div className="text-8xl mx-10 text-solar-100 font-black hover:animate-pulse mt-20">Team</div>
-            <div className="grid grid-cols-3 gap-5 mt-20 text-white text-2xl font-exo justify-items-center">
-              <div className="p-5 text-solar-100"><img src="https://avatars.githubusercontent.com/u/7686266?v=4" className="bg-solar-100 rounded-full h-60 w-60 mb-5"></img>
-              <Link href={"https://github.com/rtang03"}>rtang03</Link>
-              </div>
-              <div className="p-5 text-solar-100"><img src="https://avatars.githubusercontent.com/u/57845110?s=400&u=5460231e3addfd30b2f4f35650c81206e3d7552f&v=4" className="bg-solar-100 rounded-full h-60 w-60 mb-5"></img>
-              <Link href={"https://github.com/HabacucMX"}>habacuc.eth</Link>
-              </div>
-              <div className="p-5 text-solar-100"><img src="https://avatars.githubusercontent.com/u/36043359?v=4" className="bg-solar-100 rounded-full h-60 w-60 mb-5"></img>
-              <Link href={"https://github.com/alessandromaci"}>alessandromaci</Link></div>
-            </div>
-            */}
-          </div>
-          <div className="h-screen">
             
-            {/*
-            <div className="text-8xl mx-10 text-solar-100 font-black hover:animate-pulse mt-20">Team</div>
+            <div className="text-6xl mx-10 text-white font-black hover:animate-pulse my-20">Team:</div>
             <div className="grid grid-cols-3 gap-5 mt-20 text-white text-2xl font-exo justify-items-center">
-              <div className="p-5 text-solar-100"><img src="https://avatars.githubusercontent.com/u/7686266?v=4" className="bg-solar-100 rounded-full h-60 w-60 mb-5"></img>
-              <Link href={"https://github.com/rtang03"}>rtang03</Link>
-              </div>
-              <div className="p-5 text-solar-100"><img src="https://avatars.githubusercontent.com/u/57845110?s=400&u=5460231e3addfd30b2f4f35650c81206e3d7552f&v=4" className="bg-solar-100 rounded-full h-60 w-60 mb-5"></img>
-              <Link href={"https://github.com/HabacucMX"}>habacuc.eth</Link>
-              </div>
-              <div className="p-5 text-solar-100"><img src="https://avatars.githubusercontent.com/u/36043359?v=4" className="bg-solar-100 rounded-full h-60 w-60 mb-5"></img>
-              <Link href={"https://github.com/alessandromaci"}>alessandromaci</Link></div>
+            <a href={"https://github.com/HabacucMX"}>
+              <div className="teamMB"><img src="https://avatars.githubusercontent.com/u/57845110?s=400&u=5460231e3addfd30b2f4f35650c81206e3d7552f&v=4" className="bg-solar-100 rounded-full h-60 w-60 mb-5"></img>
+              habacuc.eth</div></a>
+              <a href={"https://github.com/Riki0923"}>
+              <div className="teamMB"><img src="https://punkcities.mypinata.cloud/ipfs/QmWn7tUAon4n5BECnQmLZ4TjjWBas5eafELwYXHzJLs6MM" className="bg-solar-100 rounded-full h-60 w-60 mb-5"></img>
+              Riki0923</div></a>
+              <a href={"https://github.com/clocigno"}>
+              <div className="teamMB"><img src="https://punkcities.mypinata.cloud/ipfs/QmRfsCPtygfqsHChiTdBUcv6A2Gpm9VKSbf3zR5jbvyNT9" className="bg-solar-100 rounded-full h-60 w-60 mb-5"></img>
+              clocigno</div></a>
             </div>
-            */}
+        
           </div>
+          
         </main>
       </div>
     </Layout>

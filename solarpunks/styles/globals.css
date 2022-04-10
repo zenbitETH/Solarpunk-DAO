@@ -377,6 +377,12 @@
     cursor-pointer hover:bg-solar-100 hover:text-night-100
   }
 
+  /* Team */
+  .teamMB {
+    @apply 
+    p-5 text-white hover:text-solar-100 hover:animate-pulse pb-32
+  }
+
   /* Dashboard */
   .DasTitle {
     @apply
