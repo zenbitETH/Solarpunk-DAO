@@ -377,6 +377,12 @@
     cursor-pointer hover:bg-solar-100 hover:text-night-100
   }
 
+  .Future {
+    @apply 
+    bg-glass-100 rounded-lg p-5 
+    cursor-pointer hover:bg-night-100 hover:text-solar-100
+  }
+
   /* Team */
   .teamMB {
     @apply 

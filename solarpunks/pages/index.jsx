@@ -25,11 +25,7 @@ const Home = () => {
             <div className=" xl:text-6xl text-4xl xl:mx-10 font-exo items-center items-center text-white">
             DAO Governance for IRL NFTs minted on
             <span className="text-solar-100 hover:text-cyber-100 cursor-pointer"> Punk Cities</span>
-            </div>
-            <div>
-            
-            </div>
-            
+            </div>            
             <div className="text-2xl mx-10 font-exo text-center mt-20 text-white">Developed @</div>
             <img className="text-white -mt-16 font-black hover:animate-pulse" src="https://dao.ethglobal.com/static/img/daohacks-logo.svg"/>
             <div >
@@ -64,11 +60,24 @@ const Home = () => {
             </div>
             <div className="text-6xl mt-20 mx-10 text-white font-black hover:animate-pulse">Built with:</div>
             <div className="grid grid-cols-5 gap-5 mt-20 text-white text-2xl font-exo">
-            <a href="https://testnets.opensea.io/collection/punk-cities" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">1. Punk Cities rewards</a>
+              <a href="https://mumbai.polygonscan.com/address/0x092BBe9022D421940B6D74799179267e5c822895" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">1. Punk Cities rewards</a>
               <a href="https://testnets.opensea.io/collection/punk-cities" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">2. Punk Cities collection</a>
               <a href="https://github.com/LearnWeb3DAO/DAOHacks-Workshop" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">3. LearnWeb3 DAO</a>
               <a href="https://github.com/rtang03/solarpunks" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">4. Lens API w/Solarpunks</a>
-              <a href="https://ipfs.io/" className="bg-glass-100  hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">5. IPFS w/NFT Storage</a>
+              <a href="https://nft.storage/" className="bg-glass-100  hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">5. IPFS w/NFT Storage</a>
+            </div>
+
+            <div className="text-6xl mt-20 mx-10 text-white font-black hover:animate-pulse">Future work:</div>
+            <div className="grid grid-cols-3 gap-5 mt-20 text-white text-2xl font-exo">
+              <div className="Future cursor-default">1. Add trees and nature 
+                <div className="text-[15rem] p-20 py-40 ">🌳</div>
+              </div>
+              <div className="Future cursor-default">2. Fund proposals
+                <div className="text-[15rem] p-20 py-40 ">⛲</div>
+              </div>
+              <div className="Future cursor-default">3. Pilot test in Queretaro México
+                <div className="text-[15rem] p-20 py-40 ">🧪</div>
+              </div>
             </div>
             
             <div className="text-6xl mx-10 text-white font-black hover:animate-pulse my-20">Team:</div>
