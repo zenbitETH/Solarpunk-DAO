@@ -257,24 +257,31 @@ const Dashboard = () => {
             <div className="Board2">
               <div className="my-5 ">💡Proposals on this place</div>
               <div className="grid grid-cols-1 gap-5 mx-2 ">
-              <div className="grid grid-cols-8 bg-glass-100 rounded-lg hover:bg-solar-900 cursor-pointer text-solar-100 hover:text-night-100">
-                  <div class="col-span-8  text-lg my-2 hover:text-night-100 ">Proposal 1 title test</div>
-                  <div class="col-span-4 my-2 text-white">20⚡ </div>
-                  <div class="col-span-2 my-2 bg-gradient-to-r from-glass-900 via-green-900 to-glass-900 text-white rounded-lg">0</div>
-                  <div class="col-span-2 my-2 bg-gradient-to-r from-glass-900 via-red-900 to-glass-900 text-white rounded-lg">2</div>
-                </div>
-                <div className="grid grid-cols-8 bg-glass-100 rounded-lg hover:bg-solar-900 cursor-pointer text-solar-100 hover:text-night-100">
-                  <div class="col-span-8  text-lg my-2 hover:text-night-100 ">Proposal 1 title test</div>
-                  <div class="col-span-4 my-2 text-white">10 💽</div>
-                  <div class="col-span-2 my-2 bg-gradient-to-r from-glass-900 via-green-900 to-glass-900 text-white rounded-lg">2</div>
-                  <div class="col-span-2 my-2 bg-gradient-to-r from-glass-900 via-red-900 to-glass-900 text-white rounded-lg">0</div>
-                </div>
-                <div className="grid grid-cols-8 bg-glass-100 rounded-lg hover:bg-solar-900 cursor-pointer text-solar-100 hover:text-night-100">
-                  <div class="col-span-8  text-lg my-2 hover:text-night-100 ">Proposal 1 title test</div>
-                  <div class="col-span-4 my-2 text-white">5⚡ </div>
-                  <div class="col-span-2 my-2 bg-gradient-to-r from-glass-900 via-green-900 to-glass-900 text-white rounded-lg">1</div>
-                  <div class="col-span-2 my-2 bg-gradient-to-r from-glass-900 via-red-900 to-glass-900 text-white rounded-lg">1</div>
-                </div>
+
+                <a href="./proposalDetail">
+                  <div className="grid grid-cols-8 bg-glass-100 rounded-lg hover:bg-solar-900 cursor-pointer text-solar-100 hover:text-night-100">
+                    <div class="col-span-8  text-lg my-2 hover:text-night-100 ">Proposal 1 title test</div>
+                    <div class="col-span-4 my-2 text-white">20⚡ </div>
+                    <div class="col-span-2 my-2 bg-gradient-to-r from-glass-900 via-green-900 to-glass-900 text-white rounded-lg">0</div>
+                    <div class="col-span-2 my-2 bg-gradient-to-r from-glass-900 via-red-900 to-glass-900 text-white rounded-lg">2</div>
+                  </div>
+                </a>
+                <a href="./proposalDetail">
+                  <div className="grid grid-cols-8 bg-glass-100 rounded-lg hover:bg-solar-900 cursor-pointer text-solar-100 hover:text-night-100">
+                    <div class="col-span-8  text-lg my-2 hover:text-night-100 ">Proposal 1 title test</div>
+                    <div class="col-span-4 my-2 text-white">20⚡ </div>
+                    <div class="col-span-2 my-2 bg-gradient-to-r from-glass-900 via-green-900 to-glass-900 text-white rounded-lg">0</div>
+                    <div class="col-span-2 my-2 bg-gradient-to-r from-glass-900 via-red-900 to-glass-900 text-white rounded-lg">2</div>
+                  </div>
+                </a>
+                <a href="./proposalDetail">
+                  <div className="grid grid-cols-8 bg-glass-100 rounded-lg hover:bg-solar-900 cursor-pointer text-solar-100 hover:text-night-100">
+                    <div class="col-span-8  text-lg my-2 hover:text-night-100 ">Proposal 1 title test</div>
+                    <div class="col-span-4 my-2 text-white">20⚡ </div>
+                    <div class="col-span-2 my-2 bg-gradient-to-r from-glass-900 via-green-900 to-glass-900 text-white rounded-lg">0</div>
+                    <div class="col-span-2 my-2 bg-gradient-to-r from-glass-900 via-red-900 to-glass-900 text-white rounded-lg">2</div>
+                  </div>
+                </a>
 
               </div>
             </div>
