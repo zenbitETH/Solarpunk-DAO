@@ -265,6 +265,7 @@
   rounded-lg text-right
   xl:text-xl font-exo
 
+
 }
 
 .ProUpdate {
@@ -297,6 +298,7 @@
   rounded-xl
   p-2
   w-full
+  bg-glass-200
 }
 
 /* Screens*/
@@ -351,7 +353,7 @@
     @apply grid grid-cols-1 
     grid-rows-4
     2xl:grid-cols-12 gap-3 
-    w-full xl:mx-28 xl:h-[50rem] flex 
+    w-full xl:mx-28 xl:h-[56rem] flex 
     font-exo
     text-2xl
   }
@@ -367,6 +369,13 @@
   .Board3 {
     @apply bg-glass-100 text-center rounded-lg text-white 
     xl:col-span-3 xl:row-span-4
+  }
+  
+  .PlaceBG {
+    @apply 
+    bg-glass-100 rounded-lg 
+    grid grid-rows-5 hover:bg-solar-100
+    cursor-pointer
   }
 
   /* How to join */

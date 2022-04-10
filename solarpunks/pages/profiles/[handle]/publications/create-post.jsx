@@ -106,7 +106,7 @@ const CreatePostPage = ({ dev }) => {
 
   return (
     <Layout>
-      <div className="MainCon">
+      <div className="MainCon -mt-16">
         {!(account && isAuthenticated) && <ConnectWalletMessage />}
         {!(account && isAuthenticated && isLensReady) && (
           <div className="LensCon">
@@ -128,7 +128,7 @@ const CreatePostPage = ({ dev }) => {
             </div>
 
             <div>
-              <div className="ProTitle my-10">🌱 Seed your post</div>
+              <div className="ProTitle my-10">💡 Create a proposal</div>
               <NewPost setParentContentURL={setContentUrl} />
             </div>
             <Formik
