@@ -98,11 +98,7 @@ const Layout = ({ children, home }) => {
       <nav className="top-hud">
         <Account />
         {account && isAuthenticated && <Authenticate />}
-        {account && isAuthenticated && isLensReady && (
-          <Link href="/dashboard">
-            <a className="hud3">Dashboard</a>
-          </Link>
-        )}
+        
         {account && isAuthenticated && isLensReady && (
           <Menu>
             <Menu.Button className="hud3">Profiles</Menu.Button>
@@ -147,11 +143,17 @@ const Layout = ({ children, home }) => {
             </Transition>
           </Menu>
         )}
+
         {account && isAuthenticated && isLensReady && (
+          <Link href="/dashboard">
+            <a className="hud4">Solarpunk DAO</a>
+          </Link>
+        )}
+        {/*account && isAuthenticated && isLensReady && (
           <Link href={`/profiles/${defaultHandle}/timeline`}>
             <a className="hud4">Timeline</a>
           </Link>
-        )}
+        )*/}
         
         {!account && (
           <span className="hud0">
@@ -163,22 +165,28 @@ const Layout = ({ children, home }) => {
       <nav className="bottom-hud">
       {account && isAuthenticated && isLensReady && (
           <Link href={`/profiles/${defaultHandle}/publications/create-post`}>
-            <a className="huda">Create Post</a>
+            <a className="huda">💡 New proposal</a>
+          </Link>
+        )}
+        {account && isAuthenticated && isLensReady && (
+          <Link href={`/profiles/${defaultHandle}/publications/create-post`}>
+            <a className="hudb">🌞(voting power)</a>
           </Link>
         )}
         
         {account && (
-          <div className="hudb">
+          <div className="hudc">
             <span> ⚡ </span>
             <span className="mx-2">{energy?.toString() ?? "N/A"}</span>
           </div>
         )}
         {account && (
-          <div className="hudc">
+          <div className="hudd">
             <span> 💽 </span>
             <span className="mx-2">{chip?.toString() ?? "N/A"}</span>
           </div>
         )}
+        
       </nav>
     </div>
   );

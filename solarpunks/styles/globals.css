@@ -85,7 +85,7 @@
 
   /* Hud */ 
   .top-hud { 
-    @apply xl:mx-96 fixed grid grid-cols-5 items-center top-0 left-0 right-0
+    @apply xl:mx-96 fixed grid grid-cols-4 items-center top-0 left-0 right-0
     rounded-b-lg
     font-exo
     text-white
@@ -96,12 +96,13 @@
   }
 
   .bottom-hud { 
-    @apply xl:mx-96 fixed grid grid-cols-3 items-center bottom-0 left-0 right-0
+    @apply xl:mx-96 fixed grid grid-cols-4 items-center bottom-0 left-0 right-0
     rounded-b-lg
     font-exo
     font-medium
     text-white
-    text-base
+    text-xs
+    xl:text-lg
     border-none
   }
 
@@ -110,8 +111,8 @@
     bg-glass-100 text-center
     rounded-b-lg
     border-none
-    hover:bg-cyber-100
-    hover:text-white
+    hover:bg-solar-100
+    hover:text-night-100
     cursor-pointer
     animate-pulse
   }
@@ -120,10 +121,17 @@
     @apply p-1 
     bg-cyber-100 text-center
     border-none
-    hover:bg-cyber-100
-    hover:text-white
+    hover:bg-solar-100
+    hover:text-night-100
     cursor-pointer
     rounded-br-lg
+  }
+
+  .lenscon {
+    @apply 
+    bg-glass-100 text-white
+    hover:bg-solar-100 hover:text-night-100
+    py-1 w-full h-full
   }
  
   .hud1 {
@@ -138,11 +146,10 @@
 
   .hud1con {
     @apply p-1 
-    bg-cyber-100 text-center
+    bg-glass-100 text-white
+    hover:bg-solar-100 hover:text-night-100
     rounded-bl-lg
     border-none
-    hover:bg-cyber-100
-    hover:text-white
     cursor-pointer
   }
 
@@ -156,8 +163,8 @@
     @apply p-1 
     bg-glass-100 text-center
     border-none
-    hover:bg-cyber-100
-    hover:text-white
+    hover:bg-solar-100
+    hover:text-night-100
     cursor-pointer
   }
   
@@ -165,26 +172,34 @@
     @apply p-1 
     bg-glass-100 text-center
     border-none
-    hover:bg-cyber-100
-    hover:text-white
+    hover:bg-solar-100
+    hover:text-night-100
     cursor-pointer
     rounded-br-lg
   }
 
   .huda {
     @apply p-1 
-    bg-glass-100 text-center
+    bg-glass-100 text-center text-white
+    hover:bg-solar-100 hover:text-night-100
     border-none
     rounded-tl-lg
   }
 
   .hudb {
     @apply p-1 
-    bg-glass-100 text-center
+    bg-glass-100 text-center text-white
+    hover:bg-solar-100 hover:text-night-100
     border-none
   }
 
   .hudc {
+    @apply p-1 
+    bg-glass-100 text-center text-white
+    border-none
+  }
+
+  .hudd {
     @apply p-1 
     bg-glass-100 text-center
     border-none
@@ -335,20 +350,43 @@
   .MainBoard {
     @apply grid grid-cols-1 
     grid-rows-4
-    2xl:grid-cols-9 gap-3 
+    2xl:grid-cols-12 gap-3 
     w-full xl:mx-28 xl:h-[50rem] flex 
     font-exo
     text-2xl
   }
   
   .Board1 {
-    @apply bg-glass-100 text-center rounded-lg text-white xl:col-span-2 xl:row-span-2
+    @apply bg-glass-100 text-center rounded-lg 2xl:col-span-6 
+    xl:row-span-4 text-white
   }
   .Board2 {
-    @apply bg-glass-100 text-center rounded-lg 2xl:col-span-4 xl:row-span-4 text-white
+    @apply bg-glass-100 text-center rounded-lg 2xl:col-span-3 
+    xl:row-span-4 text-white
   }
   .Board3 {
-    @apply bg-glass-100 text-center rounded-lg 2xl:col-span-3 xl:row-span-4 text-white
+    @apply bg-glass-100 text-center rounded-lg text-white 
+    xl:col-span-3 xl:row-span-4
+  }
+
+  /* How to join */
+
+  .joinBG {
+    @apply 
+    bg-glass-100 rounded-lg p-5 
+    cursor-pointer hover:bg-solar-100 hover:text-night-100
+  }
+
+  .Future {
+    @apply 
+    bg-glass-100 rounded-lg p-5 
+    cursor-pointer hover:bg-night-100 hover:text-solar-100
+  }
+
+  /* Team */
+  .teamMB {
+    @apply 
+    p-5 text-white hover:text-solar-100 hover:animate-pulse pb-32
   }
 
   /* Dashboard */

@@ -132,7 +132,7 @@ const Dashboard = () => {
   // End of Part 2
 
   return (
-    <Layout>
+    <Layout >
       <div className="MainCon">
         {!(account && isAuthenticated) && <ConnectWalletMessage />}
         {!(account && isAuthenticated && isLensReady) && (
@@ -141,42 +141,16 @@ const Dashboard = () => {
           </div>
         )}
       </div>
+
       {account && isAuthenticated && isLensReady && (
         <div className="MainScreen -mt-10">
           <div className="MainBoard">
-            <div className="Board1 divide-y-2">
-              <div className="my-5">
-                <a className="hover:text-solar-100 animate-pulse">
-                  <Link href="/explore">🌿My Friends</Link>
-                </a>
-              </div>
-              <div className="text-sm py-2">
-                {friendList?.map((friend, index) => (
-                  <div className="text-xl hover:text-solar-100 hover:animate-ping" key={index}>
-                    <Link href={`/explore/${friend.replace("#", "%23")}`}>
-                      <a>{friend}</a>
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="Board2 divide-y-2">
-              <div className="my-5">🌱 My Post</div>
-              <div className="text-sm text-left grid gap-2">
-                <Publications
-                  profileId={defaultProfile}
-                  handle={defaultHandle}
-                  publicationTypes={["POST"]}
-                  isPublicPublications={true}
-                  hideTitle={true}
-                  pageSize={1}
-                  showCoverPic={true}
-                />
-              </div>
-            </div>
-            <div className="Board3 divide-y-2">
+          <div className="Board3">
+              <div className="my-5 ">🌇 Punk Cities Places</div>
+          </div>
+          <div className="Board1">
               {" "}
-              <div className="my-5 ">🏢 Punk Cities Places</div>
+              <div className="my-5 ">🏢 Place detail</div>
               <div className="text-md py-2 ">
                 <div className="relative">
                   {citiesArray?.[currentCity]?.image && (
@@ -237,6 +211,42 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
+            <div className="Board2">
+              <div className="my-5 ">💡Proposals on this place</div>
+            </div>
+            {/*<div className="Board1 divide-y-2">
+              <div className="my-5">
+                <a className="hover:text-solar-100 animate-pulse">
+                  <Link href="/explore">🌿My Friends</Link>
+                </a>
+              </div>
+              <div className="text-sm py-2">
+                {friendList?.map((friend, index) => (
+                  <div className="text-xl hover:text-solar-100 hover:animate-ping" key={index}>
+                    <Link href={`/explore/${friend.replace("#", "%23")}`}>
+                      <a>{friend}</a>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+              </div>*/}
+            {/*}
+            <div className="Board2">
+              <div className="my-5">🌱 My Post</div>
+              <div className="text-sm text-left grid gap-2">
+                <Publications
+                  profileId={defaultProfile}
+                  handle={defaultHandle}
+                  publicationTypes={["POST"]}
+                  isPublicPublications={true}
+                  hideTitle={true}
+                  pageSize={1}
+                  showCoverPic={true}
+                />
+              </div>
+            </div>
+            */}
+            {/*}
             <div className="Board1 divide-y-2">
               <div className="my-5">🪴 My Followers</div>
               <div className="text-md py-2">
@@ -268,6 +278,7 @@ const Dashboard = () => {
                 )}
               </div>
             </div>
+            */}
           </div>
         </div>
       )}
