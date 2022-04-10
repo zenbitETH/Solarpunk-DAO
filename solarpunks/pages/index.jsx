@@ -38,38 +38,62 @@ const Home = () => {
             </div>
           </div>
           </div>
-          <div className="h-screen mt-20">
-          <div className="text-6xl mx-10 text-solar-100 font-black hover:animate-pulse">How to join?</div>
-          <div className="grid grid-cols-4 gap-5 mt-20 text-white text-2xl font-exo">
-            <div className="bg-glass-100 rounded-lg p-5">1.  Start a new game
-              <img src="https://punkcities.mypinata.cloud/ipfs/QmPoSnaj68Lcbs8TiAT1Lg9aodWcXE27t94kjhAw8xYZwn" className=" p-5"/>
-            </div>
-            <div className="bg-glass-100 rounded-lg p-5">2. Mint Places NFTs
-              <img src="https://punkcities.mypinata.cloud/ipfs/bafybeidufeb4xfrzwgzcx3iaabbyu7ck7p2tij3c2w2azixolxmlyouqii/8-Kids-Playground.png" className=" p-5"/>
-            </div>
-            <div className="bg-glass-100 rounded-lg p-5">3. Get Energy and Chips
-              <div className="text-8xl pt-20 animate-pulse">
-                <div className="pb-10">⚡</div>
-                <div>💽</div>
+          <div className="h-screen mt-20 -pb-32">
+            <div className="text-6xl mx-10 text-solar-100 font-black hover:animate-pulse">How to join?</div>
+            <div className="grid grid-cols-4 gap-5 mt-20 text-white text-2xl font-exo">
+              <a href={"https://punkcity.surge.sh"}>
+              <div className="bg-glass-100 rounded-lg p-5 cursor-pointer hover:bg-solar-100 hover:text-night-100">1.  Start a new game
+                <img src="https://punkcities.mypinata.cloud/ipfs/QmPoSnaj68Lcbs8TiAT1Lg9aodWcXE27t94kjhAw8xYZwn" className=" p-5"/>
+              </div>
+              </a>
+              <div className="bg-glass-100 rounded-lg p-5">2. Mint Places NFTs
+                <img src="https://punkcities.mypinata.cloud/ipfs/bafybeidufeb4xfrzwgzcx3iaabbyu7ck7p2tij3c2w2azixolxmlyouqii/8-Kids-Playground.png" className=" p-5"/>
+              </div>
+              <div className="bg-glass-100 rounded-lg p-5">3. Get Energy and Chips
+                <div className="text-8xl pt-20 animate-pulse">
+                  <div className="pb-10">⚡</div>
+                  <div>💽</div>
+                </div>
+              </div>
+              <div className="bg-glass-100 rounded-lg p-5">4. Deposit to the treasury
+                <div className="text-9xl pt-28 animate-pulse">🏦</div>
               </div>
             </div>
-            <div className="bg-glass-100 rounded-lg p-5">4. Deposit to the treasury
-              <div className="text-9xl pt-28 animate-pulse">🏦</div>
+            {/*
+            <div className="text-8xl mx-10 text-solar-100 font-black hover:animate-pulse mt-20">Team</div>
+            <div className="grid grid-cols-3 gap-5 mt-20 text-white text-2xl font-exo justify-items-center">
+              <div className="p-5 text-solar-100"><img src="https://avatars.githubusercontent.com/u/7686266?v=4" className="bg-solar-100 rounded-full h-60 w-60 mb-5"></img>
+              <Link href={"https://github.com/rtang03"}>rtang03</Link>
+              </div>
+              <div className="p-5 text-solar-100"><img src="https://avatars.githubusercontent.com/u/57845110?s=400&u=5460231e3addfd30b2f4f35650c81206e3d7552f&v=4" className="bg-solar-100 rounded-full h-60 w-60 mb-5"></img>
+              <Link href={"https://github.com/HabacucMX"}>habacuc.eth</Link>
+              </div>
+              <div className="p-5 text-solar-100"><img src="https://avatars.githubusercontent.com/u/36043359?v=4" className="bg-solar-100 rounded-full h-60 w-60 mb-5"></img>
+              <Link href={"https://github.com/alessandromaci"}>alessandromaci</Link></div>
             </div>
+            */}
           </div>
-          {/*
-          <div className="text-8xl mx-10 text-solar-100 font-black hover:animate-pulse mt-20">Team</div>
-          <div className="grid grid-cols-3 gap-5 mt-20 text-white text-2xl font-exo justify-items-center">
-            <div className="p-5 text-solar-100"><img src="https://avatars.githubusercontent.com/u/7686266?v=4" className="bg-solar-100 rounded-full h-60 w-60 mb-5"></img>
-            <Link href={"https://github.com/rtang03"}>rtang03</Link>
+          <div className="h-screen -mt-48">
+            <div className="text-6xl mx-10 text-solar-100 font-black hover:animate-pulse">Built with:</div>
+            <div className="grid grid-cols-4 gap-5 mt-20 text-white text-2xl font-exo">
+              <a href="https://testnets.opensea.io/collection/punk-cities" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">1. Punk Cities collection</a>
+              <a href="https://github.com/LearnWeb3DAO/DAOHacks-Workshop" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">2. LearnWeb3 DAO contracts</a>
+              <a href="https://github.com/rtang03/solarpunks" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">3. Lens API w/Solarpunks</a>
+              <a href="https://ipfs.io/" className="bg-glass-100  hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">4. IPFS w/NFT Storage</a>
             </div>
-            <div className="p-5 text-solar-100"><img src="https://avatars.githubusercontent.com/u/57845110?s=400&u=5460231e3addfd30b2f4f35650c81206e3d7552f&v=4" className="bg-solar-100 rounded-full h-60 w-60 mb-5"></img>
-            <Link href={"https://github.com/HabacucMX"}>habacuc.eth</Link>
+            {/*
+            <div className="text-8xl mx-10 text-solar-100 font-black hover:animate-pulse mt-20">Team</div>
+            <div className="grid grid-cols-3 gap-5 mt-20 text-white text-2xl font-exo justify-items-center">
+              <div className="p-5 text-solar-100"><img src="https://avatars.githubusercontent.com/u/7686266?v=4" className="bg-solar-100 rounded-full h-60 w-60 mb-5"></img>
+              <Link href={"https://github.com/rtang03"}>rtang03</Link>
+              </div>
+              <div className="p-5 text-solar-100"><img src="https://avatars.githubusercontent.com/u/57845110?s=400&u=5460231e3addfd30b2f4f35650c81206e3d7552f&v=4" className="bg-solar-100 rounded-full h-60 w-60 mb-5"></img>
+              <Link href={"https://github.com/HabacucMX"}>habacuc.eth</Link>
+              </div>
+              <div className="p-5 text-solar-100"><img src="https://avatars.githubusercontent.com/u/36043359?v=4" className="bg-solar-100 rounded-full h-60 w-60 mb-5"></img>
+              <Link href={"https://github.com/alessandromaci"}>alessandromaci</Link></div>
             </div>
-            <div className="p-5 text-solar-100"><img src="https://avatars.githubusercontent.com/u/36043359?v=4" className="bg-solar-100 rounded-full h-60 w-60 mb-5"></img>
-            <Link href={"https://github.com/alessandromaci"}>alessandromaci</Link></div>
-          </div>
-          */}
+            */}
           </div>
         </main>
       </div>
