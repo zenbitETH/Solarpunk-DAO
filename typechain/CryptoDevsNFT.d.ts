@@ -25,6 +25,7 @@ interface CryptoDevsNFTInterface extends ethers.utils.Interface {
     "balanceOf(address,uint256)": FunctionFragment;
     "balanceOfBatch(address[],uint256[])": FunctionFragment;
     "freeMint()": FunctionFragment;
+    "getTokenId()": FunctionFragment;
     "isApprovedForAll(address,address)": FunctionFragment;
     "owner()": FunctionFragment;
     "renounceOwnership()": FunctionFragment;
@@ -46,6 +47,10 @@ interface CryptoDevsNFTInterface extends ethers.utils.Interface {
     values: [string[], BigNumberish[]]
   ): string;
   encodeFunctionData(functionFragment: "freeMint", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "getTokenId",
+    values?: undefined
+  ): string;
   encodeFunctionData(
     functionFragment: "isApprovedForAll",
     values: [string, string]
@@ -84,6 +89,7 @@ interface CryptoDevsNFTInterface extends ethers.utils.Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "freeMint", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "getTokenId", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "isApprovedForAll",
     data: BytesLike
@@ -228,6 +234,8 @@ export class CryptoDevsNFT extends BaseContract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
+    getTokenId(overrides?: CallOverrides): Promise<[BigNumber]>;
+
     isApprovedForAll(
       account: string,
       operator: string,
@@ -295,6 +303,8 @@ export class CryptoDevsNFT extends BaseContract {
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
+  getTokenId(overrides?: CallOverrides): Promise<BigNumber>;
+
   isApprovedForAll(
     account: string,
     operator: string,
@@ -359,6 +369,8 @@ export class CryptoDevsNFT extends BaseContract {
     ): Promise<BigNumber[]>;
 
     freeMint(overrides?: CallOverrides): Promise<void>;
+
+    getTokenId(overrides?: CallOverrides): Promise<BigNumber>;
 
     isApprovedForAll(
       account: string,
@@ -540,6 +552,8 @@ export class CryptoDevsNFT extends BaseContract {
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
+    getTokenId(overrides?: CallOverrides): Promise<BigNumber>;
+
     isApprovedForAll(
       account: string,
       operator: string,
@@ -607,6 +621,8 @@ export class CryptoDevsNFT extends BaseContract {
     freeMint(
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
+
+    getTokenId(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     isApprovedForAll(
       account: string,

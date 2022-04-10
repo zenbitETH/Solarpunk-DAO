@@ -2,6 +2,7 @@
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol";
+import "@openzeppelin/contracts/utils/introspection/ERC165.sol";
 
 // Interface for the FakeNFTMarketplace
 interface IFakeNFTMarketplace {
@@ -44,16 +45,20 @@ interface ICryptoDevsNFT {
     function safeTransferFrom(
         address from,
         address to,
-        uint256 tokenId,
+        uint256 id,
         uint256 amount,
-        bytes calldata data
+        bytes memory data 
     ) external;
 
     /// @dev Returns the owner of the `tokenId` token.
-    function ownerOf(uint256 tokenId) external view returns (address owner);
+    function ownerOf(uint256 tokenId) external view returns (address);
+
+    function setApprovalForAll(address operator, bool approved) external;
+
+    function isApprovedForAll(address account, address operator) external view returns (bool);
 }
 
-contract CryptoDevsDAO is IERC1155Receiver {
+contract CryptoDevsDAO is ERC165, IERC1155Receiver {
     IFakeNFTMarketplace nftMarketplace;
     ICryptoDevsNFT cryptoDevsNft;
 
@@ -174,13 +179,11 @@ contract CryptoDevsDAO is IERC1155Receiver {
 
     // We need a way for peopel to become a member of the DAO
     function onERC1155Received(
-        address,
+        address operator,
         address from,
         uint256 tokenId,
         uint256 amount,
-        bytes memory
-    ) public override returns (bytes4) {
-        require(cryptoDevsNft.ownerOf(tokenId) == address(this), "MALICIOUS");
+        bytes calldata  data     ) external override returns (bytes4) {
         require(tokenLockedUp[tokenId] == false, "ALREADY_USED");
 
         tokenLockedUp[tokenId] = true;
@@ -225,4 +228,16 @@ contract CryptoDevsDAO is IERC1155Receiver {
     receive() external payable {}
 
     fallback() external payable {}
+
+    function onERC1155BatchReceived(
+        address operator,
+        address from,
+        uint256[] calldata ids,
+        uint256[] calldata values,
+        bytes calldata data
+    ) external override returns (bytes4){}
+
+    function supportsInterface(bytes4 interfaceId) public view virtual override(ERC165, IERC165) returns (bool) {
+        return interfaceId == type(IERC1155Receiver).interfaceId || super.supportsInterface(interfaceId);
+    }
 }
