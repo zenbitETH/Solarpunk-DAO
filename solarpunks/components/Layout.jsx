@@ -163,14 +163,17 @@ const Layout = ({ children, home }) => {
       </nav>
       <main>{children}</main>
       <nav className="bottom-hud">
+        {/* This needs an before state to not show until the user is joined to the DAO*/}      
       {account && isAuthenticated && isLensReady && (
           <Link href={`/profiles/${defaultHandle}/publications/create-post`}>
             <a className="huda">💡 New proposal</a>
           </Link>
         )}
+
+        {/* This needs an after state to show that user is already joined to DAO*/}      
         {account && isAuthenticated && isLensReady && (
           <Link href={`/profiles/${defaultHandle}/publications/create-post`}>
-            <a className="hudb">🌞(voting power)</a>
+            <a className="hudb">🌞Join to the DAO</a>
           </Link>
         )}
         
