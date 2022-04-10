@@ -13,6 +13,9 @@ contract CryptoDevsNFT is ERC1155, Ownable {
 
     uint256 tokenIdCounter;
 
+    // Mapping from token ID to owner address
+    mapping(uint256 => address) private _owners;
+
     constructor(uint256 maxNfts) ERC1155("punkdao.com") {
         MAX_NFTS = maxNfts;
     }
@@ -21,9 +24,18 @@ contract CryptoDevsNFT is ERC1155, Ownable {
         require(tokenIdCounter < MAX_NFTS, "MAX_SUPPLY_REACHED");
         tokenIdCounter++;
         _mint(msg.sender, tokenIdCounter, 1, "");
+        _owners[tokenIdCounter] = msg.sender;
     }
 
     function getTokenId() public view returns (uint256){
         return tokenIdCounter;
     }
+
+    function ownerOf(uint256 tokenId) external view returns (address) {
+        address owner = _owners[tokenId];
+        require(owner != address(0), "ERC721: owner query for nonexistent token");
+        return owner;
+    }
+
+
 }

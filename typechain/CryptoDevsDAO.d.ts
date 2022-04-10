@@ -25,9 +25,11 @@ interface CryptoDevsDAOInterface extends ethers.utils.Interface {
     "executeProposal(uint256)": FunctionFragment;
     "members(address)": FunctionFragment;
     "numProposals()": FunctionFragment;
-    "onERC721Received(address,address,uint256,bytes)": FunctionFragment;
+    "onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)": FunctionFragment;
+    "onERC1155Received(address,address,uint256,uint256,bytes)": FunctionFragment;
     "proposals(uint256)": FunctionFragment;
     "quit()": FunctionFragment;
+    "supportsInterface(bytes4)": FunctionFragment;
     "tokenLockedUp(uint256)": FunctionFragment;
     "totalVotingPower()": FunctionFragment;
     "voteOnProposal(uint256,uint8)": FunctionFragment;
@@ -47,14 +49,22 @@ interface CryptoDevsDAOInterface extends ethers.utils.Interface {
     values?: undefined
   ): string;
   encodeFunctionData(
-    functionFragment: "onERC721Received",
-    values: [string, string, BigNumberish, BytesLike]
+    functionFragment: "onERC1155BatchReceived",
+    values: [string, string, BigNumberish[], BigNumberish[], BytesLike]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "onERC1155Received",
+    values: [string, string, BigNumberish, BigNumberish, BytesLike]
   ): string;
   encodeFunctionData(
     functionFragment: "proposals",
     values: [BigNumberish]
   ): string;
   encodeFunctionData(functionFragment: "quit", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "supportsInterface",
+    values: [BytesLike]
+  ): string;
   encodeFunctionData(
     functionFragment: "tokenLockedUp",
     values: [BigNumberish]
@@ -82,11 +92,19 @@ interface CryptoDevsDAOInterface extends ethers.utils.Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: "onERC721Received",
+    functionFragment: "onERC1155BatchReceived",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "onERC1155Received",
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "proposals", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "quit", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "supportsInterface",
+    data: BytesLike
+  ): Result;
   decodeFunctionResult(
     functionFragment: "tokenLockedUp",
     data: BytesLike
@@ -165,11 +183,21 @@ export class CryptoDevsDAO extends BaseContract {
 
     numProposals(overrides?: CallOverrides): Promise<[BigNumber]>;
 
-    onERC721Received(
+    onERC1155BatchReceived(
+      operator: string,
+      from: string,
+      ids: BigNumberish[],
+      values: BigNumberish[],
+      data: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
+    onERC1155Received(
       arg0: string,
       from: string,
       tokenId: BigNumberish,
-      arg3: BytesLike,
+      amount: BigNumberish,
+      arg4: BytesLike,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
 
@@ -190,6 +218,11 @@ export class CryptoDevsDAO extends BaseContract {
     quit(
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<ContractTransaction>;
+
+    supportsInterface(
+      arg0: BytesLike,
+      overrides?: CallOverrides
+    ): Promise<[boolean]>;
 
     tokenLockedUp(
       arg0: BigNumberish,
@@ -220,11 +253,21 @@ export class CryptoDevsDAO extends BaseContract {
 
   numProposals(overrides?: CallOverrides): Promise<BigNumber>;
 
-  onERC721Received(
+  onERC1155BatchReceived(
+    operator: string,
+    from: string,
+    ids: BigNumberish[],
+    values: BigNumberish[],
+    data: BytesLike,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
+
+  onERC1155Received(
     arg0: string,
     from: string,
     tokenId: BigNumberish,
-    arg3: BytesLike,
+    amount: BigNumberish,
+    arg4: BytesLike,
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
 
@@ -245,6 +288,11 @@ export class CryptoDevsDAO extends BaseContract {
   quit(
     overrides?: Overrides & { from?: string | Promise<string> }
   ): Promise<ContractTransaction>;
+
+  supportsInterface(
+    arg0: BytesLike,
+    overrides?: CallOverrides
+  ): Promise<boolean>;
 
   tokenLockedUp(
     arg0: BigNumberish,
@@ -275,11 +323,21 @@ export class CryptoDevsDAO extends BaseContract {
 
     numProposals(overrides?: CallOverrides): Promise<BigNumber>;
 
-    onERC721Received(
+    onERC1155BatchReceived(
+      operator: string,
+      from: string,
+      ids: BigNumberish[],
+      values: BigNumberish[],
+      data: BytesLike,
+      overrides?: CallOverrides
+    ): Promise<string>;
+
+    onERC1155Received(
       arg0: string,
       from: string,
       tokenId: BigNumberish,
-      arg3: BytesLike,
+      amount: BigNumberish,
+      arg4: BytesLike,
       overrides?: CallOverrides
     ): Promise<string>;
 
@@ -298,6 +356,11 @@ export class CryptoDevsDAO extends BaseContract {
     >;
 
     quit(overrides?: CallOverrides): Promise<void>;
+
+    supportsInterface(
+      arg0: BytesLike,
+      overrides?: CallOverrides
+    ): Promise<boolean>;
 
     tokenLockedUp(
       arg0: BigNumberish,
@@ -331,11 +394,21 @@ export class CryptoDevsDAO extends BaseContract {
 
     numProposals(overrides?: CallOverrides): Promise<BigNumber>;
 
-    onERC721Received(
+    onERC1155BatchReceived(
+      operator: string,
+      from: string,
+      ids: BigNumberish[],
+      values: BigNumberish[],
+      data: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    onERC1155Received(
       arg0: string,
       from: string,
       tokenId: BigNumberish,
-      arg3: BytesLike,
+      amount: BigNumberish,
+      arg4: BytesLike,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<BigNumber>;
 
@@ -346,6 +419,11 @@ export class CryptoDevsDAO extends BaseContract {
 
     quit(
       overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
+    supportsInterface(
+      arg0: BytesLike,
+      overrides?: CallOverrides
     ): Promise<BigNumber>;
 
     tokenLockedUp(
@@ -381,11 +459,21 @@ export class CryptoDevsDAO extends BaseContract {
 
     numProposals(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
-    onERC721Received(
+    onERC1155BatchReceived(
+      operator: string,
+      from: string,
+      ids: BigNumberish[],
+      values: BigNumberish[],
+      data: BytesLike,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    onERC1155Received(
       arg0: string,
       from: string,
       tokenId: BigNumberish,
-      arg3: BytesLike,
+      amount: BigNumberish,
+      arg4: BytesLike,
       overrides?: Overrides & { from?: string | Promise<string> }
     ): Promise<PopulatedTransaction>;
 
@@ -396,6 +484,11 @@ export class CryptoDevsDAO extends BaseContract {
 
     quit(
       overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
+    supportsInterface(
+      arg0: BytesLike,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
     tokenLockedUp(
