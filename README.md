@@ -9,9 +9,7 @@ This project uses Punk Cities ERC1155 contract to mint automatically energy and 
 
 ## Contracts
 
-[📚 Solarpunk DAO](https://mumbai.polygonscan.com/address/0x74215784157f79CFce433BaC808caE8E3195fD37)  
-
-[Contract code](https://github.com/zenbitETH/Solarpunk-DAO/blob/main/contracts/PunkCityDAO.sol)  
+[📚 Solarpunk DAO](https://mumbai.polygonscan.com/address/0x74215784157f79CFce433BaC808caE8E3195fD37) / [Contract code](https://github.com/zenbitETH/Solarpunk-DAO/blob/main/contracts/PunkCityDAO.sol)  
   
 [📚 Punk Cities](https://mumbai.polygonscan.com/address/0x092BBe9022D421940B6D74799179267e5c822895)
 
