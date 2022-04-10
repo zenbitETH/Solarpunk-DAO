@@ -16,7 +16,7 @@ const Home = () => {
           </Link>
           </div> */}
         <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-          <div className="grid xl:grid-cols-2 mt-36">
+          <div className="grid xl:grid-cols-2 mt-48">
           <img
             src="https://punkcities.mypinata.cloud/ipfs/QmS3ouRXq55MZ6LU8gCHfmwGCFgNS257pdnm83CTsePuns"
             className="xl:-mt-20 xl:p-20"
@@ -45,11 +45,11 @@ const Home = () => {
               <div className="joinBG cursor-default">2. Mint Places NFTs and get ⚡ and 💽
                 <img src="https://punkcities.mypinata.cloud/ipfs/bafybeidufeb4xfrzwgzcx3iaabbyu7ck7p2tij3c2w2azixolxmlyouqii/8-Kids-Playground.png" className="w-3/4 mx-auto"/>
               </div>
-              <div className="joinBG cursor-default">3. Connect to DAO w/Lens
-                <div className="text-9xl p-10 "><div className="mb-10">🌞</div>🌿</div>
+              <div className="joinBG cursor-default">3. Connect w/Lens
+                <div className="text-[15rem] p-20 pt-44 pb-44 ">🌿</div>
               </div>
-              <div className="joinBG cursor-default">4. Deposit ⚡ and 💽 to the treasury
-                <div className="text-[15rem] p-20 pt-44 pb-44">🏦</div>
+              <div className="joinBG cursor-default">4. Join the DAO
+                <div className="text-[15rem] p-20 pt-44 pb-44">🌞</div>
               </div>
               <div className="joinBG cursor-default">5. Create proposals for your places NFTs
                 <div className="text-[15rem] p-20 pt-40 ">💡</div>
@@ -58,17 +58,19 @@ const Home = () => {
                 <div className="text-[15rem] p-20 pt-40">🗳️</div>
               </div>
             </div>
+            <a href="./dashboard"> <div className="text-9xl py-96 mx-10 text-white font-black animate-pulse"> 🕹️Demo time!</div></a>
             <div className="text-6xl mt-20 mx-10 text-white font-black hover:animate-pulse">Built with:</div>
-            <div className="grid grid-cols-5 gap-5 mt-20 text-white text-2xl font-exo">
-              <a href="https://mumbai.polygonscan.com/address/0x092BBe9022D421940B6D74799179267e5c822895" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">1. Punk Cities rewards</a>
+            <div className="grid grid-cols-6 gap-5 mt-20 text-white text-xl font-exo pb-96">
+              <a href="https://mumbai.polygonscan.com/address/0x092BBe9022D421940B6D74799179267e5c822895" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">1. Punk Cities ERC1155</a>
               <a href="https://testnets.opensea.io/collection/punk-cities" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">2. Punk Cities collection</a>
               <a href="https://github.com/LearnWeb3DAO/DAOHacks-Workshop" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">3. LearnWeb3 DAO</a>
               <a href="https://github.com/rtang03/solarpunks" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">4. Lens API w/Solarpunks</a>
               <a href="https://nft.storage/" className="bg-glass-100  hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">5. IPFS w/NFT Storage</a>
+              <a href="https://nft.storage/" className="bg-glass-100  hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">6. Polygon Mumbai</a>
             </div>
 
-            <div className="text-6xl mt-20 mx-10 text-white font-black hover:animate-pulse">Future work:</div>
-            <div className="grid grid-cols-3 gap-5 mt-20 text-white text-2xl font-exo">
+            <div className="text-6xl mt-20 mx-10 text-white font-black hover:animate-pulse ">Future work:</div>
+            <div className="grid grid-cols-3 gap-5 mt-20 text-white text-2xl font-exo mb-96">
               <div className="Future cursor-default">1. Add trees and nature 
                 <div className="text-[15rem] p-20 py-40 ">🌳</div>
               </div>
@@ -80,7 +82,9 @@ const Home = () => {
               </div>
             </div>
             
-            <div className="text-6xl mx-10 text-white font-black hover:animate-pulse my-20">Team:</div>
+            <div className="text-6xl mx-10 text-white font-black hover:animate-pulse my-20 text center"> 
+            <div></div>
+            Team:</div>
             <div className="grid grid-cols-3 gap-5 mt-20 text-white text-2xl font-exo justify-items-center">
             <a href={"https://github.com/HabacucMX"}>
               <div className="teamMB"><img src="https://avatars.githubusercontent.com/u/57845110?s=400&u=5460231e3addfd30b2f4f35650c81206e3d7552f&v=4" className="bg-solar-100 rounded-full h-60 w-60 mb-5"></img>
@@ -92,7 +96,12 @@ const Home = () => {
               <div className="teamMB"><img src="https://punkcities.mypinata.cloud/ipfs/QmRfsCPtygfqsHChiTdBUcv6A2Gpm9VKSbf3zR5jbvyNT9" className="bg-solar-100 rounded-full h-60 w-60 mb-5"></img>
               clocigno</div></a>
             </div>
-        
+
+            <img src="https://punkcities.mypinata.cloud/ipfs/QmS3ouRXq55MZ6LU8gCHfmwGCFgNS257pdnm83CTsePuns" className="h-3/4 mx-auto"/>
+            <a className="text-center pb-20" href="./dashboard"> <a className="text-8xl pt-72 pb-88 mx-10 text-white font-black hover:text-solar-100 hover:animate-pulse"> punkcity.surge.sh
+            </a></a>
+            <a href="./dashboard"> <div className="text-8xl pt-20 mx-10 text-white font-black hover:text-solar-100 hover:animate-pulse"> solarpunkDAO.surge.sh</div></a> 
+            
           </div>
           
         </main>
