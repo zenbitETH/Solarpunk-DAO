@@ -113,8 +113,8 @@ const NewPost = ({ setParentContentURL }) => {
           <Form>
             <div className="ProPost">
               {/* Field1 name */}
-              <div className="m-2 col-span-2 text-center ">
-                  <label className="ProLabel" htmlFor="name">Post title</label>
+              <div className="m-2 col-span-3 text-center ">
+                  <label className="ProLabel" htmlFor="name">Proposal Title</label>
                   <Field
                     disabled={isSubmitting || loading || !!contentUrl}
                     id="name"
@@ -130,8 +130,8 @@ const NewPost = ({ setParentContentURL }) => {
                 )}
               </div>
               {/* Field2 description */}
-              <div className="m-2 col-span-2 text-center" >
-                  <label className="ProLabel " htmlFor="description">Add details to your post</label>
+              <div className="m-2 col-span-3 text-center" >
+                  <label className="ProLabel " htmlFor="description">Add details to your proposal</label>
                   <Field
                     disabled={isSubmitting || loading || !!contentUrl}
                     as="textarea"
@@ -147,14 +147,36 @@ const NewPost = ({ setParentContentURL }) => {
                   </div>
                 )}
               </div>
+
+              {/* Field5 placeType */}
+              <div className="m-2">
+                  <label className="ProLabel" htmlFor="placeType">Select request</label>
+                  <Field
+                    disabled={isSubmitting || loading || !!contentUrl}
+                    id="placeType"
+                    name="placeType"
+                    placeholder="Choose ⚡💽"
+                    className="ProField"
+                    as="select"
+                  >
+                    <option disabled selected className="bg-glass-100">Choose⚡💽</option>
+                    <option className="bg-glass-100">⚡ Ask for energy</option>
+                    <option className="bg-glass-100">💽 Ask for chips</option>
+                  </Field>
+                {errors?.placeType && (
+                  <div>
+                    <ErrorMessage name="placeType" />
+                  </div>
+                )}
+              </div>
               {/* Field3 tag */}
               <div className="m-2">
-                  <label className="ProLabel" htmlFor="tag">Tags for your post 🏷️</label>
+                  <label className="ProLabel" htmlFor="tag">Units request</label>
                   <Field
                     disabled={isSubmitting || loading || !!contentUrl}
                     id="tag"
                     name="tag"
-                    placeholder="Camping, Climbing, Nature"
+                    placeholder="0-100"
                     className="ProField"
                   />
                 {/* Input Error */}
@@ -164,6 +186,8 @@ const NewPost = ({ setParentContentURL }) => {
                   </div>
                 )}
               </div>
+
+              
               {/* Field4 tokenId 
               <div className="m-5">
                   <label className="ProLabel" htmlFor="tokenId">Tag a Lens Friend 🌿</label>
@@ -197,32 +221,9 @@ const NewPost = ({ setParentContentURL }) => {
                   </div>
                 )}
               </div>*/}
-              {/* Field5 placeType */}
-              <div className="m-2">
-                  <label className="ProLabel" htmlFor="placeType">Purpose on your post 🌌</label>
-                  <Field
-                    disabled={isSubmitting || loading || !!contentUrl}
-                    id="placeType"
-                    name="placeType"
-                    placeholder="Choose 💖💡🤝🏽☀️💽🌿"
-                    className="ProField"
-                    as="select"
-                  >
-                    <option disabled selected>Choose 💖💡🤝🏽☀️💽🌿</option>
-                    <option>💖 Show love</option>
-                    <option>💡 Share idea</option>
-                    <option>🤝🏽 Ask for help</option>
-                    <option>☀️ Ask for energy</option>
-                    <option>💽 Ask for chips</option>
-                    <option>🌿 Meet new friends!</option>
-                  </Field>
-                {errors?.placeType && (
-                  <div>
-                    <ErrorMessage name="placeType" />
-                  </div>
-                )}
-              </div>
+              
             </div>
+            <div>
             <div className="m-5 text-center text-white">
             <div className="mb-10 ">🖼️ Add media to your post!</div>
                 <label className="file">
@@ -260,6 +261,7 @@ const NewPost = ({ setParentContentURL }) => {
                 )}
                 {contentUrl && <div className="ProLabel">Image successfully upload</div>}
                 {error && <a class="text-white mt-5">Oops, something failed!</a>}
+              </div>
               </div>
           </Form>
         )}
