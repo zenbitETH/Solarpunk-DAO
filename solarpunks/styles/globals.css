@@ -350,20 +350,23 @@
   .MainBoard {
     @apply grid grid-cols-1 
     grid-rows-4
-    2xl:grid-cols-9 gap-3 
+    2xl:grid-cols-12 gap-3 
     w-full xl:mx-28 xl:h-[50rem] flex 
     font-exo
     text-2xl
   }
   
   .Board1 {
-    @apply bg-glass-100 text-center rounded-lg text-white xl:col-span-2 xl:row-span-2
+    @apply bg-glass-100 text-center rounded-lg 2xl:col-span-6 
+    xl:row-span-4 text-white
   }
   .Board2 {
-    @apply bg-glass-100 text-center rounded-lg 2xl:col-span-4 xl:row-span-4 text-white
+    @apply bg-glass-100 text-center rounded-lg 2xl:col-span-3 
+    xl:row-span-4 text-white
   }
   .Board3 {
-    @apply bg-glass-100 text-center rounded-lg 2xl:col-span-3 xl:row-span-4 text-white
+    @apply bg-glass-100 text-center rounded-lg text-white 
+    xl:col-span-3 xl:row-span-4
   }
 
   /* Dashboard */
