@@ -16,13 +16,13 @@ const Home = () => {
           </Link>
           </div> */}
         <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-          <div className="grid grid-cols-2 mt-36">
+          <div className="grid xl:grid-cols-2 mt-36">
           <img
             src="https://punkcities.mypinata.cloud/ipfs/QmS3ouRXq55MZ6LU8gCHfmwGCFgNS257pdnm83CTsePuns"
-            className="-mt-20 p-20"
+            className="xl:-mt-20 xl:p-20"
           />
           <div className="justify-items-center text-center mt-40">
-            <div className=" text-6xl mx-10 font-exo items-center items-center text-white">
+            <div className=" xl:text-6xl text-4xl xl:mx-10 font-exo items-center items-center text-white">
             DAO Governance for IRL NFTs minted on
             <span className="text-solar-100 hover:text-cyber-100 cursor-pointer"> Punk Cities</span>
             </div>
@@ -40,24 +40,35 @@ const Home = () => {
           </div>
           <div className="h-screen mt-20 -pb-32">
             <div className="text-6xl mx-10 text-solar-100 font-black hover:animate-pulse">How to join?</div>
-            <div className="grid grid-cols-4 gap-5 mt-20 text-white text-2xl font-exo">
+            <div className="grid xl:grid-cols-3 gap-5 mt-20 text-white text-2xl font-exo">
               <a href={"https://punkcity.surge.sh"}>
-              <div className="bg-glass-100 rounded-lg p-5 cursor-pointer hover:bg-solar-100 hover:text-night-100">1.  Start a new game
-                <img src="https://punkcities.mypinata.cloud/ipfs/QmPoSnaj68Lcbs8TiAT1Lg9aodWcXE27t94kjhAw8xYZwn" className=" p-5"/>
+              <div className="joinBG">1.  Start a new game
+                <img src="https://punkcities.mypinata.cloud/ipfs/QmPoSnaj68Lcbs8TiAT1Lg9aodWcXE27t94kjhAw8xYZwn" className="p-5 w-3/4 mx-auto"/>
               </div>
               </a>
-              <div className="bg-glass-100 rounded-lg p-5">2. Mint Places NFTs
-                <img src="https://punkcities.mypinata.cloud/ipfs/bafybeidufeb4xfrzwgzcx3iaabbyu7ck7p2tij3c2w2azixolxmlyouqii/8-Kids-Playground.png" className=" p-5"/>
+              <div className="joinBG cursor-default">2. Mint Places NFTs and get ⚡ and 💽
+                <img src="https://punkcities.mypinata.cloud/ipfs/bafybeidufeb4xfrzwgzcx3iaabbyu7ck7p2tij3c2w2azixolxmlyouqii/8-Kids-Playground.png" className="w-3/4 mx-auto"/>
               </div>
-              <div className="bg-glass-100 rounded-lg p-5">3. Get Energy and Chips
-                <div className="text-8xl pt-20 animate-pulse">
-                  <div className="pb-10">⚡</div>
-                  <div>💽</div>
-                </div>
+              <div className="joinBG cursor-default">3. Connect to DAO w/Lens
+                <div className="text-9xl p-10 "><div className="mb-10">🌞</div>🌿</div>
               </div>
-              <div className="bg-glass-100 rounded-lg p-5">4. Deposit to the treasury
-                <div className="text-9xl pt-28 animate-pulse">🏦</div>
+              <div className="joinBG cursor-default">4. Deposit ⚡ and 💽 to the treasury
+                <div className="text-[15rem] p-20 pt-44 pb-44">🏦</div>
               </div>
+              <div className="joinBG cursor-default">5. Create proposals for your places NFTs
+                <div className="text-[15rem] p-20 pt-40 ">💡</div>
+              </div>
+              <div className="joinBG cursor-default">6. Vote and fund proposals w/⚡and 💽  
+                <div className="text-[15rem] p-20 pt-40">🗳️</div>
+              </div>
+            </div>
+            <div className="text-6xl mt-20 mx-10 text-solar-100 font-black hover:animate-pulse">Built with:</div>
+            <div className="grid grid-cols-5 gap-5 mt-20 text-white text-2xl font-exo">
+            <a href="https://testnets.opensea.io/collection/punk-cities" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">1. Punk Cities rewards</a>
+              <a href="https://testnets.opensea.io/collection/punk-cities" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">2. Punk Cities collection</a>
+              <a href="https://github.com/LearnWeb3DAO/DAOHacks-Workshop" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">3. LearnWeb3 DAO</a>
+              <a href="https://github.com/rtang03/solarpunks" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">4. Lens API w/Solarpunks</a>
+              <a href="https://ipfs.io/" className="bg-glass-100  hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">5. IPFS w/NFT Storage</a>
             </div>
             {/*
             <div className="text-8xl mx-10 text-solar-100 font-black hover:animate-pulse mt-20">Team</div>
@@ -73,14 +84,8 @@ const Home = () => {
             </div>
             */}
           </div>
-          <div className="h-screen -mt-48">
-            <div className="text-6xl mx-10 text-solar-100 font-black hover:animate-pulse">Built with:</div>
-            <div className="grid grid-cols-4 gap-5 mt-20 text-white text-2xl font-exo">
-              <a href="https://testnets.opensea.io/collection/punk-cities" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">1. Punk Cities collection</a>
-              <a href="https://github.com/LearnWeb3DAO/DAOHacks-Workshop" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">2. LearnWeb3 DAO contracts</a>
-              <a href="https://github.com/rtang03/solarpunks" className="bg-glass-100 hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">3. Lens API w/Solarpunks</a>
-              <a href="https://ipfs.io/" className="bg-glass-100  hover:bg-solar-100 hover:text-night-100 rounded-lg p-5">4. IPFS w/NFT Storage</a>
-            </div>
+          <div className="h-screen">
+            
             {/*
             <div className="text-8xl mx-10 text-solar-100 font-black hover:animate-pulse mt-20">Team</div>
             <div className="grid grid-cols-3 gap-5 mt-20 text-white text-2xl font-exo justify-items-center">

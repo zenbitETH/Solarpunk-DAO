@@ -369,6 +369,14 @@
     xl:col-span-3 xl:row-span-4
   }
 
+  /* How to join */
+
+  .joinBG {
+    @apply 
+    bg-glass-100 rounded-lg p-5 
+    cursor-pointer hover:bg-solar-100 hover:text-night-100
+  }
+
   /* Dashboard */
   .DasTitle {
     @apply
