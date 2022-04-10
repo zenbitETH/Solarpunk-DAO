@@ -147,6 +147,49 @@ const Dashboard = () => {
           <div className="MainBoard">
           <div className="Board3">
               <div className="my-5 ">🌇 Punk Cities Places</div>
+              <grid className="grid grid-cols-2 m-3 gap-3">
+                <place className="PlaceBG">
+                  <div className="row-span-4">
+                    <img className="w-4/5 mx-auto" src="https://punkcities.mypinata.cloud/ipfs/bafybeidufeb4xfrzwgzcx3iaabbyu7ck7p2tij3c2w2azixolxmlyouqii/7-Hospital.png"/>
+                  </div>
+                  <div className="bg-night-100 rounded-b-lg grid grid-cols-3 text-center text-base">
+                    <div>1 👍</div>
+                    <div>0 ⚡</div>
+                    <div>1 💽 </div>
+                  </div>
+                </place>
+                <place className="PlaceBG">
+                  <div className="row-span-4">
+                    <img className="w-4/5 mx-auto" src="https://punkcities.mypinata.cloud/ipfs/bafybeidufeb4xfrzwgzcx3iaabbyu7ck7p2tij3c2w2azixolxmlyouqii/12.Public-Park.png"/>
+                  </div>
+                  <div className="bg-night-100 rounded-b-lg grid grid-cols-3 text-center text-base">
+                    <div>2 👍</div>
+                    <div>2 ⚡</div>
+                    <div>0 💽 </div>
+                  </div>
+                </place>
+                <place className="PlaceBG">
+                  <div className="row-span-4">
+                    <img className="w-4/5 mx-auto" src="https://punkcities.mypinata.cloud/ipfs/bafybeidufeb4xfrzwgzcx3iaabbyu7ck7p2tij3c2w2azixolxmlyouqii/3%20City%20Hall.png"/>
+                  </div>
+                  <div className="bg-night-100 rounded-b-lg grid grid-cols-3 text-center text-base">
+                    <div>1 👍</div>
+                    <div>0 ⚡</div>
+                    <div>0 💽 </div>
+                  </div>
+                </place>
+                <place className="PlaceBG">
+                  <div className="row-span-4">
+                    <img className="w-4/5 mx-auto" src="https://punkcities.mypinata.cloud/ipfs/bafybeidufeb4xfrzwgzcx3iaabbyu7ck7p2tij3c2w2azixolxmlyouqii/11.Police-Station.png"/>
+                  </div>
+                  <div className="bg-night-100 rounded-b-lg grid grid-cols-3 text-center text-base">
+                    <div>1 👍</div>
+                    <div>1 ⚡</div>
+                    <div>1 💽 </div>
+                  </div>
+                </place>
+              </grid>
+              
           </div>
           <div className="Board1">
               {" "}
@@ -213,6 +256,27 @@ const Dashboard = () => {
             </div>
             <div className="Board2">
               <div className="my-5 ">💡Proposals on this place</div>
+              <div className="grid grid-cols-1 gap-5 mx-2 ">
+              <div className="grid grid-cols-8 bg-glass-100 rounded-lg hover:bg-solar-900 cursor-pointer text-solar-100 hover:text-night-100">
+                  <div class="col-span-8  text-lg my-2 hover:text-night-100 ">Proposal 1 title test</div>
+                  <div class="col-span-4 my-2 text-white">20⚡ </div>
+                  <div class="col-span-2 my-2 bg-gradient-to-r from-glass-200 via-green-900 to-glass-200 text-white">0</div>
+                  <div class="col-span-2 my-2 bg-gradient-to-r from-glass-200 via-red-900 to-glass-200 text-white">2</div>
+                </div>
+                <div className="grid grid-cols-8 bg-glass-100 rounded-lg hover:bg-solar-900 cursor-pointer text-solar-100 hover:text-night-100">
+                  <div class="col-span-8  text-lg my-2 hover:text-night-100 ">Proposal 1 title test</div>
+                  <div class="col-span-4 my-2 text-white">10 💽</div>
+                  <div class="col-span-2 my-2 bg-gradient-to-r from-glass-200 via-green-900 to-glass-200 text-white">2</div>
+                  <div class="col-span-2 my-2 bg-gradient-to-r from-glass-200 via-red-900 to-glass-200 text-white">0</div>
+                </div>
+                <div className="grid grid-cols-8 bg-glass-100 rounded-lg hover:bg-solar-900 cursor-pointer text-solar-100 hover:text-night-100">
+                  <div class="col-span-8  text-lg my-2 hover:text-night-100 ">Proposal 1 title test</div>
+                  <div class="col-span-4 my-2 text-white">5⚡ </div>
+                  <div class="col-span-2 my-2 bg-gradient-to-r from-glass-200 via-green-900 to-glass-200 text-white">1</div>
+                  <div class="col-span-2 my-2 bg-gradient-to-r from-glass-200 via-red-900 to-glass-200 text-white">1</div>
+                </div>
+
+              </div>
             </div>
             {/*<div className="Board1 divide-y-2">
               <div className="my-5">
