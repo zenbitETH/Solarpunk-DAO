@@ -1,7 +1,7 @@
 import { MoralisProvider } from "react-moralis";
 
-const APP_ID = "OM0lh4o5YtQJmH9yvmFUQE0UT12Dm7RBlIY0yqmo";
-const SERVER_URL = "https://i3al5fdaammr.usemoralis.com:2053/server";
+const APP_ID = "uf9Ygw54rdzWRFuU9N4YnriWLNGABzM4FKQ0i8GU";
+const SERVER_URL = "https://dbytjnrliegt.usemoralis.com:2053/server";
 
 const MoralisContextProvider = ({ children }) => {
   if (!APP_ID || !SERVER_URL)
