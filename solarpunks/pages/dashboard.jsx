@@ -15,7 +15,7 @@ import { gql, useQuery } from "@apollo/client";
 const PUNKCITIES_ADDRESS = "0x092BBe9022D421940B6D74799179267e5c822895";
 
 const Dashboard = () => {
-  const { friendList, setFriendList, isLensReady, defaultHandle, defaultProfile } =
+  const { friendList, setFriendList, /*isLensReady*/ defaultHandle, defaultProfile } =
     useContext(LensContext);
   const { account, isAuthenticated, user } = useMoralis();
 
@@ -135,14 +135,14 @@ const Dashboard = () => {
     <Layout >
       <div className="MainCon">
         {!(account && isAuthenticated) && <ConnectWalletMessage />}
-        {!(account && isAuthenticated && isLensReady) && (
+        {/*!(account && isAuthenticated && isLensReady) && (
           <div className="LensCon">
             <div className="LensIcon">🌿</div>Lens is not active
           </div>
-        )}
+        )*/}
       </div>
 
-      {account && isAuthenticated && isLensReady && (
+      {account && isAuthenticated /*&& isLensReady*/ && (
         <div className="MainScreen -mt-10">
           <div className="MainBoard">
           <div className="Board3">

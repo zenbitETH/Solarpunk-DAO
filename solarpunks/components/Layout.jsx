@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Account from "./Account/Account";
 import { useMoralis } from "react-moralis";
-import Authenticate from "../components/Lens/Authenicate";
+//import Authenticate from "../components/Lens/Authenicate";
 import { useContext, useEffect, Fragment, useRef, useState } from "react";
 import LensContext from "./LensContext";
 import { useQuery } from "@apollo/client";
@@ -28,7 +28,7 @@ const Layout = ({ children, home }) => {
   const { account, isAuthenticated } = useMoralis();
 
   const {
-    isLensReady,
+    //isLensReady,
     defaultProfile,
     defaultHandle,
     setDefaultProfile,
@@ -97,9 +97,9 @@ const Layout = ({ children, home }) => {
     <div>
       <nav className="top-hud">
         <Account />
-        {account && isAuthenticated && <Authenticate />}
+        {/*account && isAuthenticated && <Authenticate />*/}
         
-        {account && isAuthenticated && isLensReady && (
+        {account && isAuthenticated /*&& isLensReady*/ && (
           <Menu>
             <Menu.Button className="hud3">Profiles</Menu.Button>
             <Transition
@@ -144,7 +144,7 @@ const Layout = ({ children, home }) => {
           </Menu>
         )}
 
-        {account && isAuthenticated && isLensReady && (
+        {account && isAuthenticated /*&& isLensReady*/ && (
           <Link href="/dashboard">
             <a className="hud4">Solarpunk DAO</a>
           </Link>
@@ -164,14 +164,14 @@ const Layout = ({ children, home }) => {
       <main>{children}</main>
       <nav className="bottom-hud">
         {/* This needs an before state to not show until the user is joined to the DAO*/}      
-      {account && isAuthenticated && isLensReady && (
+      {account && isAuthenticated /*&& isLensReady*/ && (
           <Link href={`/profiles/${defaultHandle}/publications/create-post`}>
             <a className="huda">💡 New proposal</a>
           </Link>
         )}
 
         {/* This needs an after state to show that user is already joined to DAO*/}      
-        {account && isAuthenticated && isLensReady && (
+        {account && isAuthenticated /*&& isLensReady*/ && (
           <Link href={`/profiles/${defaultHandle}/publications/create-post`}>
             <a className="hudb">🌞Join to the DAO</a>
           </Link>
